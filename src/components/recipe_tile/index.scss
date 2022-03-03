@@ -1,0 +1,62 @@
+@import "../../style/theme.scss";
+.recipe_tile {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 250px;
+  border: 2px solid $grey-color;
+  cursor: pointer;
+  background-color: $third-color;
+
+  transition: box-shadow 0.2s;
+
+  box-shadow: 4px 4px $dark-grey-color;
+
+  &:hover {
+    .img-container {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    .recipe_title {
+      padding-left: 2px;
+    }
+
+    box-shadow: 6px 6px $dark-grey-color;
+  }
+
+  .img-container {
+    height: 150px;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+
+      object-fit: contain;
+      transition: transform 0.2s;
+    }
+  }
+
+  .recipe_title {
+    margin: 5px;
+    transition: padding 0.2s;
+    font: 600 17px "Poppins", sans-serif;
+    height: 30px;
+
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden; /* "overflow" value must be different from "visible" */
+
+    text-overflow: ellipsis;
+  }
+  .recipe_description {
+    margin: 5px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../../../style/theme.scss";
+
+#title-recipe {
+  background-color: $second-color;
+  box-shadow: $default-border;
+
+  padding: 10px;
+}
+
+#recipe-content {
+  padding: 10px;
+}
+
+.topic {
+  padding: 0px 10px;
+
+  margin-top: 10px;
+  width: max-content;
+
+  background-color: $fourth-color;
+  box-shadow: $default-border;
+}
+
+#directions-items {
+  list-style-type: initial;
+}
+
+.topic-items {
+  list-style-type: square;
+  width: max-content;
+  max-width: 90%;
+
+  font: 400 18px "Nunito", sans-serif;
+
+  margin: 10px;
+  padding: 10px;
+
+  background-color: $fourth-color;
+  box-shadow: $default-border;
+
+  li {
+    border-bottom: 1px solid $dark-grey-color;
+  }
+}

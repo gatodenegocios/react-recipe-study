@@ -1,0 +1,12 @@
+@import "../../../../style/theme.scss";
+#recipe-pane {
+  flex: 5;
+
+  border-left: 2px solid $dark-grey-color;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

@@ -1,0 +1,16 @@
+@import "../../../../style/theme.scss";
+
+button {
+  width: 200px;
+  transition: padding 0.2s, background-color 0.2s;
+  box-shadow: none;
+
+  &:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+
+  &:hover {
+    padding-left: 20px;
+    background-color: $light-grey-color;
+  }
+}

@@ -1,0 +1,68 @@
+@import "../../../../style/theme.scss";
+
+.full-page {
+  display: flex;
+  align-items: stretch;
+  height: 85vh;
+
+  aside {
+    flex: 6;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    $span-offset: 60px;
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span {
+      padding-left: 0;
+      padding-right: $span-offset;
+      text-shadow: 2px 2px 1px grey;
+      &:nth-of-type(odd) {
+        padding-left: $span-offset;
+        padding-right: 0;
+      }
+    }
+
+    img {
+      width: 300px;
+    }
+  }
+
+  main {
+    flex: 5;
+    display: flex;
+
+    flex-direction: column;
+
+    $border-info: 2px solid $dark-grey-color;
+    border-left: $border-info;
+    .top-bar {
+      flex: 5;
+
+      background-color: $second-color;
+      border-bottom: $border-info;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bottom-bar {
+      border-bottom: $border-info;
+
+      flex: 5;
+      display: flex;
+      //align-items: stretch;
+    }
+  }
+}

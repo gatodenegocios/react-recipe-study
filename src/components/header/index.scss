@@ -1,0 +1,22 @@
+@import "../../style/theme.scss";
+
+header {
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $white-color;
+  border-bottom: 2px solid $dark-grey-color;
+  box-shadow: $default-border;
+}
+
+#title {
+  font: 700 25px "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,17 @@
+@import "../../../../style/theme.scss";
+#recipes-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+#last-recipes-container {
+  margin: 30px 10px;
+}
+
+#last-recipes-title {
+  font: 700 25px "Nunito", sans-serif;
+  border-bottom: 2px solid $dark-grey-color;
+  text-shadow: 1px 1px 1px grey;
+}
