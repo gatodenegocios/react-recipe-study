@@ -7,28 +7,23 @@ export function useRecipeById(id: string) {
   const [loading, setLoading] = useState<boolean>(true);
 
   async function searchRecipeById() {
-    try {
-      const response = await axios.get(`http://localhost:3005/recipes/${id}`);
+    const response = await axios.get(`http://localhost:3005/recipes/${id}`);
 
-      if (response.status === 200) {
-        const elem = response.data;
-        const recipe = {
-          id: elem.id,
-          name: elem.name,
-          description: elem.description,
-          imgUrl: elem.url,
-          ingredients: elem.ingredients,
-          directions: elem.directions,
-        };
+    if (response.status === 200) {
+      const elem = response.data;
+      const recipe = {
+        id: elem.id,
+        name: elem.name,
+        description: elem.description,
+        imgUrl: elem.url,
+        ingredients: elem.ingredients,
+        directions: elem.directions,
+      };
 
-        setLoading(false);
+      setLoading(false);
 
-        setRecipe(recipe);
-      } else {
-        //setError(response.data.message);
-      }
-    } catch (e) {
-      //setError(`${e}`);
+      setRecipe(recipe);
+    } else {
     }
   }
 

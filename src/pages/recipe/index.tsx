@@ -23,13 +23,17 @@ export function RecipePage() {
     history.push("/");
   }
 
+  function throwError() {
+    throw new Error("botao");
+  }
+
   return (
     <div className="content">
       <HeaderComponent />
       <div className="recipe">
         <RecipeBody loading={loading} recipe={recipe} />
 
-        <Button onClick={toHomePage}>Back</Button>
+        <Button onClick={throwError}>Back</Button>
       </div>
     </div>
   );
