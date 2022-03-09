@@ -18,7 +18,7 @@ export function HeaderComponent() {
   }
 
   return (
-    <header>
+    <header data-testid="header">
       <span onClick={toHomePage} id="title">
         comidocas
       </span>
