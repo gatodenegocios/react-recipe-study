@@ -1,4 +1,4 @@
-#React recipe study
+# React recipe study
 This is a project to study to framework React js. It is a fake recipe site that consumes a mock api. 
 It has two pages, the **home page** and the **recipe page**.
 
