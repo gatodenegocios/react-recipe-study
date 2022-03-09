@@ -1,16 +1,52 @@
 import * as ReactDOM from "react-dom";
 import React from "react";
-import { Button } from ".";
-import { render } from "@testing-library/react";
+import { Button, ButtonProps } from ".";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 describe(Button, () => {
+  let buttonText = "text";
   let container: HTMLDivElement;
 
-  beforeEach(() => {
-    container = document.createElement("div");
-    document.body.appendChild(container);
-    render(<Button>a</Button>);
+  const renderButton = (props?: ButtonProps) => {
+    render(<Button {...props}>{buttonText}</Button>);
+  };
+
+  const getButton = () => {
+    return screen.getByTestId("button");
+  };
+
+  const getButtonByText = () => {
+    return screen.getByText(buttonText);
+  };
+
+  it("renders button correctly", () => {
+    renderButton();
+    expect(getButton());
   });
 
-  it("if renders", () => {});
+  it("renders button with the text", () => {
+    renderButton();
+    expect(getButtonByText());
+  });
+
+  it("calls onclick function", () => {
+    const onClick = jest.fn();
+
+    renderButton({ onClick: onClick });
+
+    userEvent.click(getButton());
+
+    expect(onClick).toHaveBeenCalled();
+  });
+
+  it("do not call onclick function when the button is disabled", () => {
+    const onClick = jest.fn();
+
+    renderButton({ onClick: onClick, disabled: true });
+
+    userEvent.click(getButton());
+
+    expect(onClick).not.toHaveBeenCalled();
+  });
 });
