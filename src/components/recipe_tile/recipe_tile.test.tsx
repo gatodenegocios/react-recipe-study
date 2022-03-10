@@ -35,4 +35,19 @@ describe(RecipeTile, () => {
       screen.getByTestId("recipe-tile--image");
     expect(elementImg.src).toBe(`http://localhost/${imgUrl}`);
   });
+
+  it("test click", () => {
+    const onClick = jest.fn();
+    render(
+      <RecipeTile
+        id={""}
+        name={""}
+        description={""}
+        imgUrl={""}
+        onClick={onClick}
+      />
+    );
+    userEvent.click(screen.getByTestId("recipe-tile"));
+    expect(onClick).toHaveBeenCalled();
+  });
 });
