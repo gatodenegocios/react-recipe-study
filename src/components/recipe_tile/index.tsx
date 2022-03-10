@@ -3,12 +3,11 @@ import { RecipeDescriptionType } from "../../types/recipe_description_type";
 
 import "./index.scss";
 
-type RecipeTileProps = HTMLAttributes<HTMLElement> & {
-  recipeContent: RecipeDescriptionType;
-};
+export type RecipeTileProps = HTMLAttributes<HTMLElement> &
+  RecipeDescriptionType;
 
 export function RecipeTile({ ...props }: RecipeTileProps) {
-  const recipe = props.recipeContent;
+  //const recipe = props.recipeContent;
 
   return (
     <div
@@ -17,16 +16,16 @@ export function RecipeTile({ ...props }: RecipeTileProps) {
       data-testid="recipe-tile"
     >
       <div className="img-container">
-        <img src={recipe.imgUrl} data-testid="recipe-tile--image" />
+        <img src={props.imgUrl} data-testid="recipe-tile--image" />
       </div>
       <div className="recipe_title" data-testid="recipe-tile--name">
-        {recipe.name}
+        {props.name}
       </div>
       <div
         className="recipe_description"
         data-testid="recipe-tile--description"
       >
-        {recipe.description}
+        {props.description}
       </div>
     </div>
   );

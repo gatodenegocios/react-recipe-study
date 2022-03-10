@@ -6,16 +6,7 @@ import { RecipeTile } from ".";
 
 describe(RecipeTile, () => {
   it("render", () => {
-    render(
-      <RecipeTile
-        recipeContent={{
-          id: "",
-          name: "",
-          description: "",
-          imgUrl: "",
-        }}
-      />
-    );
+    render(<RecipeTile id={""} name={""} description={""} imgUrl={""} />);
     const element = screen.getByTestId("recipe-tile");
     expect(element);
   });
@@ -27,12 +18,10 @@ describe(RecipeTile, () => {
     const imgUrl = "testImgUrl";
     render(
       <RecipeTile
-        recipeContent={{
-          id: id,
-          name: name,
-          description: description,
-          imgUrl: imgUrl,
-        }}
+        id={id}
+        name={name}
+        description={description}
+        imgUrl={imgUrl}
       />
     );
 
