@@ -11,12 +11,23 @@ export function RecipeTile({ ...props }: RecipeTileProps) {
   const recipe = props.recipeContent;
 
   return (
-    <div className="recipe_tile" onClick={props.onClick}>
+    <div
+      className="recipe_tile"
+      onClick={props.onClick}
+      data-testid="recipe-tile"
+    >
       <div className="img-container">
-        <img src={recipe.imgUrl} />
+        <img src={recipe.imgUrl} data-testid="recipe-tile--image" />
       </div>
-      <div className="recipe_title">{recipe.name}</div>
-      <div className="recipe_description">{recipe.description}</div>
+      <div className="recipe_title" data-testid="recipe-tile--name">
+        {recipe.name}
+      </div>
+      <div
+        className="recipe_description"
+        data-testid="recipe-tile--description"
+      >
+        {recipe.description}
+      </div>
     </div>
   );
 }
