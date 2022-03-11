@@ -23,7 +23,7 @@ export function LastRecipes({ ...props }: LastRecipeProps) {
             <RecipeTile
               key={elem.id}
               onClick={() => openRecipe(elem.id.toString())}
-              recipeContent={elem}
+              {...elem}
             />
           );
         })}
