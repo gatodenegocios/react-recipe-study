@@ -80,11 +80,14 @@ export const Snackbar = forwardRef<SnackbarHandle, SnackbarProps>(
         case SnackbarState.hidden:
           return "hidden";
       }
-      //'return showSnackbar ? "show" : "hidden";
     }
 
     return (
-      <div id={getId()} className={`snackbar ${getBackgroundColor()}`}>
+      <div
+        id={getId()}
+        className={`snackbar ${getBackgroundColor()}`}
+        data-testid="snackbar"
+      >
         <div className={"symbol"}>{getSymbol()}</div>
         <div className="message">{message}</div>
       </div>
