@@ -5,7 +5,7 @@ export function CategoriesPane() {
   const { showUnimplementedFunction } = useSnackbar();
 
   return (
-    <div id="categories-pane">
+    <div id="categories-pane" data-testid="categories-pane">
       <LocalButton onClick={showUnimplementedFunction}>Meat</LocalButton>
       <LocalButton onClick={showUnimplementedFunction}>Soup</LocalButton>
       <LocalButton onClick={showUnimplementedFunction}>Fish</LocalButton>
