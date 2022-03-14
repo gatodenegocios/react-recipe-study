@@ -8,7 +8,7 @@ import { Rows } from "../../components/rows/rows";
 
 export function Banner() {
   return (
-    <div className="full-page">
+    <div className="full-page" data-testid="banner">
       <aside>
         <div className="texts">
           <BigText>easy to make</BigText>
