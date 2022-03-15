@@ -4,7 +4,7 @@ import "./index.scss";
 
 export function RecipeNumber() {
   return (
-    <div id="recipe-pane">
+    <div id="recipe-pane" data-testid="recipe-pane">
       <MediumText>More than</MediumText>
       <BigText>3</BigText>
       <MediumText>recipes</MediumText>
