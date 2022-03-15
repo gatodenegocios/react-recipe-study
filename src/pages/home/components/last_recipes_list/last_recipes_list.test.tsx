@@ -47,7 +47,7 @@ describe(LastRecipes, () => {
     userEvent.click(element.children[0]);
   });
 
-  it("redirect function", () => {
+  it("redirect function being called", () => {
     const onClick = jest.fn();
 
     render(<LastRecipes openRecipe={onClick} recipes={recipes} />);
