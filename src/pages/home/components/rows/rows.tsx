@@ -3,7 +3,7 @@ import "./rows.scss";
 
 export function Rows() {
   return (
-    <div id="rows">
+    <div id="rows" data-testid="rows">
       <Row
         title="salads"
         imgSrc="https://s2.glbimg.com/pXlIoA7WATMayt9w4cYcMduaR-g=/0x0:580x387/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/Y/4/qfH9BpTBm3WoQ5mzLW0Q/salada-italiana.jpg"
